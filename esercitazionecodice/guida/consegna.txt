@@ -1,0 +1,42 @@
+Svolgere i seguenti punti. Scrivere le opportune istruzioni nel metodo main() per collaudare le classi create:
+
+1. Utilizzando la definizione della classe Punto.java in allegato definire una nuova classe Segmento che ha due attributi di tipo Punto (start, end) che denotano i punti di inizio e di fine del segmento. Definire un costruttore per la classe che prende due punti come argomento e li imposta come inizio e fine del segmento.
+La classe deve inoltre avere un metodo pubblico lunghezza() che restituisce la lunghezza del segmento, calcolata sulla base delle coordinate dei due punti che ne definiscono l'inizio e la fine.
+
+2. Definire l'interfaccia Colorabile con i due metodi seguenti:
+
+    getColore() che restituisce un valore intero;
+    setColore(int c) che prende in ingresso un valore intero e non restituisce nessun valore.
+
+3. Realizzare una classe PoligonoGenerico; la classe ha come attributo un array di oggetti di tipo Segmento definiti nel punto 1. Dotare la classe di un costruttore che prenda in ingresso un array di oggetti di tipo Punto e li usi per istanziare i segmenti che compongono il poligono (tali punti rappresentano i vertici del poligono). Un segmento viene creato da 2 punti consecutivi. L'ultimo segmento è creato dall'ultimo punto dell'array con il primo punto dell'array.
+
+La classe deve fornire i seguenti metodi:
+
+    "getNumeroSegmenti" che restituisce il numero di segmenti che compongono il poligono
+    "getSegmento"  che restituisce il Segmento n-esimo del poligono
+
+4. Realizzare una classe SegmentoColorato che descrive un segmento colorato (implementa l'interfaccia Coloabile) utilizzando opportunamente le relazioni con gli elementi creati nei punti precedenti. Creare nel main un segmento rosso e uno blu.
+
+
+5. Realizzare una classe PoligonoColorato che aggiunge al poligono generico due metodi:
+
+    "....setColore(....)" che se prende in input un solo parametro colore, colora tutti i segmenti di quel colore, se prende in input due parametri, colore e n-esimo segmento, applica il colore solo al segmento selezionato
+    "....getColori(...)" che restituisce una stringa coi colori dei segmenti. Es. "rosso rosso rosso rosso" se il poligono è un quadrato rosso, "giallo blu giallo blu giallo" se è un pentagono con lati gialli e blu alternati.
+
+Crea nel main un triangolo con 2 lati gialli e uno rosso e un esagono con
+lati verdi e blu, stampare a video per ogni poligono il numero di lati  e
+i colori
+
+6: Realizzare una classe di supporto chiamata Colori. La classe definisce le seguenti costanti intere, ciascuna rappresentante un colore supportato:
+
+    ROSSO=0
+    VERDE=1
+    GIALLO=2
+    BLU=3
+    BIANCO=4
+    NERO=5
+    GRIGIO=6
+    ARANCIONE=7
+
+La classe dispone inoltre di un metodo statico getNomeColore, che prende in input un intero(uno dei colori supportati) e restituisce una rappresentazione sotto forma di String.
+Utilizzare la classe Colore per migliorare l'assegnazione dei colori e l'output a video del programma
