@@ -28,7 +28,7 @@ lati verdi e blu, stampare a video per ogni poligono il numero di lati  e
 i colori
 
 6: Realizzare una classe di supporto chiamata Colori. La classe definisce le seguenti costanti intere, ciascuna rappresentante un colore supportato:
-
+       static final
     ROSSO=0
     VERDE=1
     GIALLO=2
