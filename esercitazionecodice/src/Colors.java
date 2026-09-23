@@ -2,40 +2,46 @@ import java.awt.*;
 import java.util.*;
 
 public class Colors {
-    private int rgb1;
-    private int rgb2;
-    private int rgb3;
-    public int getColore(){ //Input per getRed, getGreen, getBlue
-        String unionecolori;
-        try{
-            unionecolori=String.valueOf(rgb1)+String.valueOf(rgb2)+String.valueOf(rgb3);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        int colorefinale;
-        try{
-            colorefinale= Integer.valueOf(unionecolori);
-        }
-        catch (Exception e){
-            throw new RuntimeException(e);
-        }
-        return colorefinale;
+    //---
+    //Non è necessario creare un colore, bensì è un codice identificativo (Punto 6).
+    //---
+    public int getColore(SegmentoColorato segmentoColorato){
+        return segmentoColorato.colore;
     }
-    public Color setColore(int r, int g, int b) {
-        boolean ErrorHandler = false;
-        while (ErrorHandler!=true){
-            if (r<255&&r>0&&g<255&&g>0&&b<255&b>0){
-                ErrorHandler=true;
-            }
-            else {
-                //Correzione r, g & b
-                System.out.println("");
-            }
-        }
-
-        /*prendo c in considerazione come se l'utente avvesse già eseguito getColor
-          per ottenere l'rgb completo.
-         */
+    public int setColore(SegmentoColorato segmentoColorato, int colore) {
+        segmentoColorato.colore=colore;
         return 0;
+    } //Nessun colore, cambia 'codice identificativo' ad oggetto
+    public String getNomeColore(int n) {
+        String coloreoutput = "";
+        switch (n) {
+            case 0:
+                coloreoutput = "rosso ";
+                break;
+            case 1:
+                coloreoutput = "verde ";
+                break;
+            case 2:
+                coloreoutput = "giallo ";
+                break;
+            case 3:
+                coloreoutput = "blu ";
+                break;
+            case 4:
+                coloreoutput = "bianco ";
+                break;
+            case 5:
+                coloreoutput = "nero ";
+                break;
+            case 6:
+                coloreoutput = "grigio ";
+                break;
+            case 7:
+                coloreoutput = "arancione ";
+                break;
+            default:
+                coloreoutput = "sconosciuto ";
+        }
+        return coloreoutput;
     }
-}
+    }

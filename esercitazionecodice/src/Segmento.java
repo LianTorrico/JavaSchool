@@ -1,13 +1,16 @@
 public class Segmento {
-    private int start;
-    private int end;
-    public Segmento(int start, int end){
-        this.start = start;
+    private Punto start;
+    private Punto end;
+    public Segmento(Punto start, Punto end){ //Modifica, rende Segmento dipendente da Punto
+        this.start = start;                  //Senza, Punto non avrebbe senso di esistere
         this.end = end;
     }
     public int lunghezza() {
         int lunghezzatotale;
-        lunghezzatotale = start + end;
+        int x,y;
+        x= start.getX();
+        y= end.getY();
+        lunghezzatotale = x+y;
         return lunghezzatotale;
     }
 }

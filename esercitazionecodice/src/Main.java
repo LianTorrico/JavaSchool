@@ -1,13 +1,31 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+    Punto[] triangolo= {
+            new Punto(0, 0),
+            new Punto(6, 0),
+            new Punto(3, 8)
+    };
+    PoligonoColorato triangolocolorato= new PoligonoColorato(triangolo);
+    triangolocolorato.setColore(2);
+    triangolocolorato.setColore(0,2);
+    System.out.println("TRIANGOLO\nNumero Lati: "+triangolocolorato.getNumeroSegmenti()+"\nColori: "+ triangolocolorato.getColori());
+    Punto[] esagono= {
+            new Punto(0,0),
+            new Punto(1,0),
+            new Punto(2,1),
+            new Punto(2,2),
+            new Punto(1,3),
+            new Punto(0,2)
+    };
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+    PoligonoColorato esagonocolorato= new PoligonoColorato(esagono); //1 verde 3 blu
+    esagonocolorato.setColore(1,0);
+    esagonocolorato.setColore(3,1);
+    esagonocolorato.setColore(1,2);
+    esagonocolorato.setColore(3,3);
+    esagonocolorato.setColore(1,4);
+    esagonocolorato.setColore(3,5);
+    System.out.println("TRIANGOLO\nNumero Lati: "+esagonocolorato.getNumeroSegmenti()+"\nColori: "+ esagonocolorato.getColori());
+    //IO.println
     }
-}
