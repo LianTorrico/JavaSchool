@@ -1,0 +1,3 @@
+Carota;Carlo;20/10/2001;1234567890;ccarota@gmail.com
+Rossi;Mario;20/10/2001;3338905757;mrossi@gmail.com
+Bianchi;Paolo;10/11/1998;33256879;pbianchi@gmail.com
